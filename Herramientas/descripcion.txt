@@ -1,0 +1,38 @@
+Primero debo ordenar mis ideas.
+
+para lograr recrear un algoritmo DES Debo saber como funciona. Hasta ahora tengo
+ una leve idea de como es que el algoritmo cifra los textos
+
+
+Antes se necesita un texto que cifrar. por ejemplo:
+
+"Hola es un gusto saber de ti"
+
+El algoritmo DES primero hace bloques de 64 bits.. El texto que estoy usando de
+ejemplo evidentemente es mayor a 64bits 8 caracteres = 64 bits, en este caso
+tenemos que este texto de ejemplo tiene 28 caracteres incluyendo los espacios.
+Si hacemos una división para saber cuantos bloques de 64 bits debemos crear...
+Nos da como resultado 3.5.
+_________________________________________________________________________________________
+Aquí nos topamos con el primer problema.
+
+    problema hasta ahora.... Si vamos a dividir el texto en bloques de 64 bits
+      (8 caracteres), ¿Como creamos esos bloques y no perderles de vista?
+
+        »Idea 1 en python se pueden crear listas dentro de listas... Estas listas pueden
+        llevar diferentes tipos de datos cadenas, enteros e incluso variables.
+
+        »Idea 2.. Se pueden guardar en una lista el primer bloque de 64bits corresponde
+        a lista[0]='Hola es ' (Que se note que los espacios cuentan.)
+
+
+
+    ¿Que pasa si mi texto tengo para hacer 3 bloques de 64 bits pero me faltan 4
+      caracteres para formar mi ultimo bloque?
+
+      »Idea 1 Se puede rellenar los 32bits restantes con un valor nulo (00000000
+      00000000 00000000 00000000)
+
+
+
+_________________________________________________________________________________________
